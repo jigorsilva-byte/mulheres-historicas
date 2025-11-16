@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainhas da História</title>
+    <!-- Carrega Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carrega fontes Inter e Cormorant Garamond --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* bg-gray-50 (Fundo claro) */
+        }
+        /* Classe para a fonte do título */
+        .font-title {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Efeito de hover sutil para os cartões */
+        .story-card {
+            border-radius: 1rem; /* Borda mais suave (rounded-2xl) */
+        }
+        .story-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra mais suave e escura */
+        }
+        /* Estilizando a barra de rolagem do modal */
+        #storyContent::-webkit-scrollbar {
+            width: 8px;
+        }
+        #storyContent::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        #storyContent::-webkit-scrollbar-thumb {
+            background: #a8a29e; /* cor cinza/pedra */
+            border-radius: 10px;
+        }
+        #storyContent::-webkit-scrollbar-thumb:hover {
+            background: #78716c; /* cor mais escura */
+        }
+        /* Permite quebras de linha e espaços em branco no texto da história */
+        #storyText {
+            white-space: pre-wrap;
+        }
+        /* Estilo para a imagem da genealogia */
+        #genealogyImage {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1.5rem; /* Espaçamento abaixo da imagem */
+            border-radius: 0.5rem; /* Cantos levemente arredondados */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Cabeçalho --><header class="text-center p-8 md:p-12">
+        <h1 class="font-title text-4xl md:text-6xl font-bold text-purple-900" style="text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            Rainhas da História
+        </h1>
+        <p class="text-lg text-gray-600 mt-2">Guerreiras, Líderes e Lendas</p>
+        <!-- LEGENDA ADICIONADA --><p class="text-md text-purple-800 font-semibold mt-4">
+            Click nas imagens para conhecer a história de cada uma dessas mulheres incríveis.
+        </p>
+    </header>
+
+    <!-- Galeria de Histórias --><main class="container mx-auto p-4 md:p-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Nefertiti --><div class="story-card bg-white shadow-lg rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
+                 data-title="Nefertiti"
+                 data-image-src="https://i.imgur.com/Slr3PDG.png"
+                 data-story="Nefertiti foi a rainha da 18ª dinastia de faraós do Antigo Egito, venerada entre os egípcios da época como uma 'deusa viva'. Esta importante personagem da história eg[...]\n                 CURIOSIDADE: Na tradução livre, Nefertiti significa 'a mais bela chegou'. De acordo com alguns egiptólogos, esta rainha é sempre descrita como um símbolo de fascinante beleza. Este sentido se int[...]\n                ">
+                
+                <img src="https://i.imgur.com/Slr3PDG.png" alt="Capa de Nefertiti" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-title text-2xl font-bold text-purple-900">Nefertiti</h3>
+                </div>
+            </div>
+
+            <!-- Kandake Amanirenas --><div class="story-card bg-white shadow-lg rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
+                 data-title="Kandake Amanirenas"
+                 data-image-src="https://i.imgur.com/ScdCNYw.png"
+                 data-story="Kandake Amanirenas foi uma rainha guerreira do antigo Reino de Cuxe (em Nubia, no atual Sudão) que liderou uma defesa bem-sucedida contra a expansão do Império Romano n[...]\n                 CURIOSIDADE: 'Kandake' era um termo meroítico para rainha ou mãe real, e o título era concedido a rainhas e mães do rei no Reino de Cuxe.">
+                
+                <img src="https://i.imgur.com/ScdCNYw.png" alt="Capa de Kandake Amanirenas" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-title text-2xl font-bold text-purple-900">Kandake Amanirenas</h3>
+                </div>
+            </div>
+
+            <!-- Amina da Nigéria --><div class="story-card bg-white shadow-lg rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
+                 data-title="Amina da Nigéria"
+                 data-image-src="https://i.imgur.com/0zIgjRM.png"
+                 data-story="Amina nasceu em 1533 na província de Zazzau, no território hoje ocupado pela Nigéria. Filha do rei local, era descendente de uma família de ricos comerciantes que nego[...]\n                 CURIOSIDADE: Conta a história que, após cada batalha, ela escolhia um novo 'marido'. Ele passaria uma noite com ela e, no dia seguinte, seria condenado à morte.">
+                
+                <img src="https://i.imgur.com/0zIgjRM.png" alt="Capa de Amina da Nigéria" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-title text-2xl font-bold text-purple-900">Amina da Nigéria</h3>
+                </div>
+            </div>
+
+            <!-- Zacimba Gaba --><div class="story-card bg-white shadow-lg rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
+                 data-title="Zacimba Gaba"
+                 data-image-src="https://i.imgur.com/knBQrrg.png"
+                 data-story="Zacimba Gaba foi uma princesa da nação Cabinda (dizimada pelos portugueses), em Angola, que foi levada escravizada da África para o Brasil em 1690, precisamente ao port[...]\n                 CURIOSIDADE: Pó de amansar sinhô - Um dos venenos mais utilizados na região de São Mateus e Conceição da Barra era extraído da cabeça da 'Preguiçosa', uma cobra temida pelo seu veneno mortal,[...]\n                ">
+                
+                <img src="https://i.imgur.com/knBQrrg.png" alt="Capa de Zacimba Gaba" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-title text-2xl font-bold text-purple-900">Zacimba Gaba</h3>
+                </div>
+            </div>
+
+            <!-- Tereza de Benguela --><div class="story-card bg-white shadow-lg rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
+                 data-title="Tereza de Benguela"
+                 data-image-src="https://i.imgur.com/OOoheGn.png"
+                 data-story="Tereza de Benguela, conhecida como 'Rainha Tereza', foi uma líder quilombola do século XVIII que governou o Quilombo do Quariterê, no atual Mato Grosso. Após a morte d[...]\n                 CURIOSIDADE: Sob sua liderança, o quilombo prosperou, com uma estrutura política e econômica organizada, que incluía um sistema parlamentar para tomar decisões e um forte sistema de defesa. A com[...]\n                ">
+                
+                <img src="https://i.imgur.com/OOoheGn.png" alt="Capa de Tereza de Benguela" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-title text-2xl font-bold text-purple-900">Tereza de Benguela</h3>
+                </div>
+            </div>
+
+            <!-- Dandara dos Palmares --><div class="story-card bg-white shadow-lg rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
+                 data-title="Dandara dos Palmares"
+                 data-image-src="https://i.imgur.com/BudcwMG.png"
+                 data-genealogy-src="https://i.imgur.com/bprf5Bi.png" 
+                 data-story="Foi uma guerreira negra do período colonial do Brasil no Quilombo de Palmares. Zumbi dos Palmares foi seu marido e com ele teve três filhos: Aristogíton, Harmódio e Mo[...]\n                ">
+
+                <img src="https://i.imgur.com/BudcwMG.png" alt="Capa de Dandara dos Palmares" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-title text-2xl font-bold text-purple-900">Dandara dos Palmares</h3>
+                </div>
+            </div>
+
+             <!-- Rainha de Sabá --><div class="story-card bg-white shadow-lg rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
+                 data-title="Rainha de Sabá"
+                 data-image-src="https://i.imgur.com/5odC1qc.png"
+                 data-story="A Rainha de Sabá, é também conhecida como Rainha do Sul, ela é uma figura histórica que relatos afirmam ser uma mulher muito poderosa, de grande sabedoria, além de r[...]\n                 CURIOSIDADE: A rainha de Sabá é lembrada por sua busca por sabedoria na visita memorável que fez ao rei Salomão, filho de Davi. A Bíblia não menciona o nome da Rainha de Sabá. Apenas relata que[...]\n                ">
+
+                <img src="https://i.imgur.com/5odC1qc.png" alt="Capa de Rainha de Sabá" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-title text-2xl font-bold text-purple-900">Rainha de Sabá</h3>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Rodapé com Créditos e Observações --><footer class="text-center p-8 mt-12 border-t border-gray-200 text-gray-600">
+        <p class="mb-2 text-sm">Idealização e conceito do blog: <strong>Prof. Esp. José Igor</strong> e <strong>Profa. Ma. Paula Duarte</strong>.</p>
+        <p class="mb-4 text-sm"><em>Observação: As imagens apresentadas são meramente ilustrativas e foram geradas pela IA Gemini.</em></p>
+        <p class="text-xs text-gray-500">Referências: (As informações históricas foram compiladas de fontes de conhecimento geral.)</p>
+    </footer>
+
+    <!-- Modal para exibir a história --><div id="storyModal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50 hidden transition-opacity duration-300" aria-modal="true" role="dialog">
+        <!-- Conteúdo do Modal --><div class="bg-white text-gray-900 rounded-2xl shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row overflow-hidden" onclick="event.stopPropagation()">
+            
+            <!-- Imagem Principal no Modal --><img id="storyImage" src="" alt="Imagem da História" class="w-full md:w-1/2 h-64 md:h-auto object-cover">
+
+            <!-- Conteúdo do Texto e Imagem da Genealogia --><div class="flex flex-col p-6 flex-grow overflow-y-auto">
+                <!-- Botão de Fechar --><button id="closeModalBtn" class="self-end text-gray-400 hover:text-gray-700 text-3xl font-bold mb-2">&times;</button>
+                
+                <!-- Título --><h2 id="storyTitle" class="font-title text-3xl md:text-4xl font-bold text-purple-900 mb-4"></h2>
+                
+                <!-- Texto da História (com rolagem) --><div id="storyContent" class="text-gray-700 text-base md:text-lg leading-relaxed overflow-y-auto flex-grow pr-2">
+                    <p id="storyText"></p>
+
+                    <!-- Container da genealogia MOVIDO para DENTRO da área de rolagem -->
+                    <div id="genealogyContainer" class="mt-6 hidden">
+                        <p class="text-sm font-semibold text-gray-600 mb-2">Curiosidade Visual: Árvore Genealógica</p>
+                        <img id="genealogyImage" src="" alt="Árvore Genealógica" class="w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const storyModal = document.getElementById('storyModal');
+            const storyImage = document.getElementById('storyImage');
+            const storyTitle = document.getElementById('storyTitle');
+            const storyText = document.getElementById('storyText');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const genealogyContainer = document.getElementById('genealogyContainer'); // NOVO
+            const genealogyImage = document.getElementById('genealogyImage');         // NOVO
+            
+            const storyCards = document.querySelectorAll('.story-card');
+
+            storyCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    // Pega os dados do cartão clicado
+                    const title = card.dataset.title;
+                    const imageUrl = card.dataset.imageSrc;
+                    const story = card.dataset.story;
+                    const genealogyUrl = card.dataset.genealogySrc; // NOVO: Pega o link da genealogia
+
+                    // Preenche o modal com os dados
+                    storyTitle.textContent = title;
+                    storyImage.src = imageUrl;
+                    storyImage.alt = `Imagem de ${title}`;
+                    storyText.textContent = story;
+
+                    // Lógica para exibir/ocultar a imagem da genealogia
+                    if (genealogyUrl) {
+                        genealogyImage.src = genealogyUrl;
+                        genealogyImage.alt = `Árvore Genealógica de ${title}`;
+                        genealogyContainer.classList.remove('hidden'); // Mostra o container
+                    } else {
+                        genealogyContainer.classList.add('hidden'); // Esconde se não houver URL
+                    }
+
+                    // Mostra o modal
+                    storyModal.classList.remove('hidden');
+                    storyModal.classList.add('opacity-100');
+                    document.body.style.overflow = 'hidden'; // Impede rolagem do fundo
+                });
+            });
+
+            // Função para fechar o modal
+            const closeModal = () => {
+                storyModal.classList.add('hidden');
+                storyModal.classList.remove('opacity-100');
+                document.body.style.overflow = 'auto'; // Permite rolagem do fundo novamente
+            };
+
+            // Event listener para fechar (botão)
+            closeModalBtn.addEventListener('click', closeModal);
+
+            // Event listener para fechar (clicando fora)
+            storyModal.addEventListener('click', closeModal);
+        });
+    </script>
+
+</body>
+</html>
